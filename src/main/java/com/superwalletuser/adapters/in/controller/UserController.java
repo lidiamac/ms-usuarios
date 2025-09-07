@@ -1,7 +1,7 @@
 package com.superwalletuser.adapters.in.controller;
 
 
-import com.superwalletuser.application.service.UserService;
+import com.superwalletuser.application.service.UserServiceImpl;
 import com.superwalletuser.application.validator.UserValidator;
 import com.superwalletuser.domain.request.UserRequest;
 import com.superwalletuser.domain.response.UserResponse;
@@ -20,12 +20,11 @@ import static org.springframework.http.HttpStatus.CREATED;
 @RequiredArgsConstructor
 public class UserController {
 
-    private final UserService userService;
+    private final UserServiceImpl userService;
     private final UserValidator validator;
 
     @PostMapping
-    public ResponseEntity<UserResponse> crreateUser(@RequestBody @Valid UserRequest request){
-        validator.validate(request);
+    public ResponseEntity<UserResponse> createUser(@RequestBody @Valid UserRequest request){
         var response = userService.createUser(request);
         return ResponseEntity.status(CREATED).body(response);
     }
@@ -44,7 +43,7 @@ public class UserController {
 
     @GetMapping("/{id}")
     public ResponseEntity<UserResponse> getUserById(@PathVariable UUID id) {
-        var response = userService.getUserbyId(id);
+        var response = userService.findUserById(id);
         return ResponseEntity.ok(response);
     }
 

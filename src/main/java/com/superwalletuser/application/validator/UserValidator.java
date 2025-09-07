@@ -1,8 +1,8 @@
 package com.superwalletuser.application.validator;
 
+import com.superwalletuser.adapters.out.repository.UserRepositoryImpl;
+import com.superwalletuser.domain.entity.User;
 import com.superwalletuser.infraestructure.exception.BusinessException;
-import com.superwalletuser.domain.request.UserRequest;
-import com.superwalletuser.adapters.out.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -12,11 +12,11 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class UserValidator {
 
+    private final UserRepositoryImpl userRepository;
 
-    private final UserRepository userRepository;
-    public void validate(UserRequest request) {
+    public void validate(User user) {
 
-        userRepository.findByEmailOrDocument(request.getEmail(), request.getDocument()).ifPresent(u -> {
+        userRepository.findByEmailOrDocument(user).ifPresent(u -> {
             throw new BusinessException("User with given email or document already exists");
         });
 
