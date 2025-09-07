@@ -10,6 +10,7 @@ import java.util.UUID;
 
 import static jakarta.persistence.EnumType.STRING;
 import static java.time.LocalDateTime.now;
+import static java.util.Objects.isNull;
 
 @Getter
 @Setter
@@ -26,6 +27,8 @@ public class JpaUserEntity {
         this.password = user.getPassword();
         this.email = user.getEmail();
         this.userType = user.getUserType();
+        this.createdAt = user.getCreatedAt();
+        this.isActive = user.getIsActive();
     }
 
     @Id
@@ -50,8 +53,12 @@ public class JpaUserEntity {
 
     @PrePersist
     public void prePersist() {
-        createdAt = now();
-        isActive = true;
+        if (isNull(createdAt)) {
+            createdAt = now();
+        }
+        if (isNull(isActive)) {
+            isActive = true;
+        }
     }
 
 }

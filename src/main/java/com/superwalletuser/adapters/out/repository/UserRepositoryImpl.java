@@ -3,6 +3,7 @@ package com.superwalletuser.adapters.out.repository;
 import com.superwalletuser.adapters.out.repository.entities.JpaUserEntity;
 import com.superwalletuser.domain.entity.User;
 import com.superwalletuser.domain.repository.UserRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,6 +11,7 @@ import java.util.UUID;
 
 import static java.util.stream.Collectors.toList;
 
+@Repository
 public class UserRepositoryImpl implements UserRepository {
 
     private final JpaUserRepository jpaUserRepository;
