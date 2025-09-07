@@ -1,14 +1,13 @@
-package com.superwalletuser.service;
+package com.superwalletuser.application.service;
 
-import com.superwalletuser.exception.BusinessException;
-import com.superwalletuser.model.assembler.UserAssembler;
-import com.superwalletuser.model.request.UserRequest;
-import com.superwalletuser.model.response.UserResponse;
-import com.superwalletuser.repository.UserRepository;
-import com.superwalletuser.validator.UserValidator;
+import com.superwalletuser.adapters.out.repository.UserRepository;
+import com.superwalletuser.application.validator.UserValidator;
+import com.superwalletuser.infraestructure.exception.BusinessException;
+import com.superwalletuser.util.mappers.UserAssembler;
+import com.superwalletuser.domain.request.UserRequest;
+import com.superwalletuser.domain.response.UserResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

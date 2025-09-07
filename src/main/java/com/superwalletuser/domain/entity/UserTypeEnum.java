@@ -1,4 +1,4 @@
-package com.superwalletuser.model.entity;
+package com.superwalletuser.domain.entity;
 
 public enum UserTypeEnum {
     COMMON,

@@ -1,9 +1,9 @@
-package com.superwalletuser.model.assembler;
+package com.superwalletuser.util.mappers;
 
 
-import com.superwalletuser.model.entity.User;
-import com.superwalletuser.model.request.UserRequest;
-import com.superwalletuser.model.response.UserResponse;
+import com.superwalletuser.domain.entity.User;
+import com.superwalletuser.domain.request.UserRequest;
+import com.superwalletuser.domain.response.UserResponse;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;

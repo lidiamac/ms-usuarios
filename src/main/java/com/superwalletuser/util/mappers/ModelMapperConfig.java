@@ -1,4 +1,4 @@
-package com.superwalletuser.config;
+package com.superwalletuser.util.mappers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

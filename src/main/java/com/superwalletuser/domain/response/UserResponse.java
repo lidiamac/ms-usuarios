@@ -1,6 +1,6 @@
-package com.superwalletuser.model.response;
+package com.superwalletuser.domain.response;
 
-import com.superwalletuser.model.entity.UserTypeEnum;
+import com.superwalletuser.domain.entity.UserTypeEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

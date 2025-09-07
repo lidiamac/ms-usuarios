@@ -1,11 +1,10 @@
-package com.superwalletuser.controller;
+package com.superwalletuser.adapters.in.controller;
 
 
-import com.superwalletuser.model.entity.User;
-import com.superwalletuser.model.request.UserRequest;
-import com.superwalletuser.model.response.UserResponse;
-import com.superwalletuser.service.UserService;
-import com.superwalletuser.validator.UserValidator;
+import com.superwalletuser.application.service.UserService;
+import com.superwalletuser.application.validator.UserValidator;
+import com.superwalletuser.domain.request.UserRequest;
+import com.superwalletuser.domain.response.UserResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

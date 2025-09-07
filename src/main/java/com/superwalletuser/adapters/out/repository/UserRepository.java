@@ -1,6 +1,6 @@
-package com.superwalletuser.repository;
+package com.superwalletuser.adapters.out.repository;
 
-import com.superwalletuser.model.entity.User;
+import com.superwalletuser.domain.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

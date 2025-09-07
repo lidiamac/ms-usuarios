@@ -1,8 +1,8 @@
-package com.superwalletuser.validator;
+package com.superwalletuser.application.validator;
 
-import com.superwalletuser.exception.BusinessException;
-import com.superwalletuser.model.request.UserRequest;
-import com.superwalletuser.repository.UserRepository;
+import com.superwalletuser.infraestructure.exception.BusinessException;
+import com.superwalletuser.domain.request.UserRequest;
+import com.superwalletuser.adapters.out.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

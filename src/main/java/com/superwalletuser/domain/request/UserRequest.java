@@ -1,6 +1,6 @@
-package com.superwalletuser.model.request;
+package com.superwalletuser.domain.request;
 
-import com.superwalletuser.model.entity.UserTypeEnum;
+import com.superwalletuser.domain.entity.UserTypeEnum;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

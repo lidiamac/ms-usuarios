@@ -1,4 +1,4 @@
-package com.superwalletuser.exception;
+package com.superwalletuser.infraestructure.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
