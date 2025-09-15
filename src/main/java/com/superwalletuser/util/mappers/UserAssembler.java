@@ -17,7 +17,6 @@ public class UserAssembler {
     public User toEntity(UserRequest request){
         return mapper.map(request, User.class);
     }
-
     public UserResponse toResponse(User entity){
         return mapper.map(entity, UserResponse.class);
     }
